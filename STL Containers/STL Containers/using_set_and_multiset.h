@@ -89,7 +89,12 @@ void call_funcs_using_set_and_multiset(){
     cout << "Current set: \n\n";
     
     do{
-        cout << &*itr << endl;
+        employee emp = *itr;
+        cout << emp.get_name() << endl;
+        cout << "Emp#: " << emp.get_id() << endl;
+        cout << "Dept: " << emp.get_dept() << endl;
+        cout << "Phone: " << emp.get_phone() << endl;
+        cout << endl;
         ++itr;
     }while (itr != emplist.end());
     cout << endl;
@@ -99,6 +104,11 @@ void call_funcs_using_set_and_multiset(){
     itr = emplist.find(employee("8723"));
     if (itr != emplist.end()){
         cout << "Found. Information follows:\n";
-        cout << &*itr << endl;
+        employee emp = *itr;
+        cout << emp.get_name() << endl;
+        cout << "Emp#: " << emp.get_id() << endl;
+        cout << "Dept: " << emp.get_dept() << endl;
+        cout << "Phone: " << emp.get_phone() << endl;
+        cout << endl;
     }
 }
